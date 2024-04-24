@@ -1,0 +1,20 @@
+{
+  "deviceName": "hsn-2161115424-dev",
+  "deviceType": "018c62b9-dca6-7092-bad2-faf27451aaf2",
+  "groupName": "018c5d0d-b2f1-7057-8d14-ba8f4b57f921",
+  "attributes": {
+    "serialNumber": "2161115424",
+    "integrationName": "Test integration",
+    "Aktualisiert": "2024-04-04 06:34:59",
+    "watchdog_timeout": "com.ksb.msm20",
+    "vendor_name": "MSM20",
+    "product_name": "v1.3.2",
+    "hw_variant": "131759",
+    "hw_revision": "R1.1",
+    "fw_bundle": "",
+    "fw_name": "v1.7.0",
+    "fw_version": 351358815273039,
+    "ble_passkey": 901405108780767,
+    "modem_fw_version": "HARDWARIO"
+  }
+}

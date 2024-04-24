@@ -1,0 +1,26 @@
+{
+  "attempt": 0,
+  "message": {
+    "id": "018ea7d1-5b69-70f6-b54c-25688ad14c1e",
+    "body": "{\"app_fw_bundle\":\"com.ksb.msm20\",\"app_fw_name\":\"MSM20\",\"app_fw_version\":\"v1.3.2\",\"ble_passkey\":\"131759\",\"hw_revision\":\"R1.1\",\"hw_variant\":\"\",\"lte_fw_version\":\"v1.7.0\",\"lte_imei\":351358815273039,\"lte_imsi\":901405108780767,\"product_name\":\"CHESTER-U1\",\"serial_number\":2161115424,\"vendor_name\":\"HARDWARIO\",\"watchdog_timeout\":0}",
+    "created_at": "2024-04-04T06:34:59.305Z",
+    "type": "session",
+    "direction": "up",
+    "created_time": "2024-04-04T06:34:59.305Z"
+  },
+  "device": {
+    "id": "018d5ea6-f380-753b-8ab9-1d842532038f",
+    "space_id": "018c5d0d-b2f1-7057-8d14-ba8f4b57f921",
+    "serial_number": "2161115424",
+    "session_id": 1712212499,
+    "created_at": "2024-01-31T08:33:36.128Z",
+    "label": {
+      "batch": "1",
+      "dev": "1"
+    }
+  },
+  "connector": {
+    "id": "018dcb0b-ac94-7d48-8dde-cff8080bc03f",
+    "timeout": 0
+  }
+}
