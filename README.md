@@ -2,31 +2,37 @@
 
 ## Add new converters
 
-The Repository decoders of Device supports different Integrations.
+The Repository contains decoders for different device integrations.
 
-Each user has the opportunity to add his own version of the decoder for a specific device.
+Users can contribute by adding their own version of the decoder for a specific device.
 
-Decoder is added by fork pool request to this repository.
+To add a decoder, submit a fork pull request to this repository.
 
 ### Files and Directories
 
-There are four or seven file in the Convertors Repository (format only json) for one Device 
+Each device in the Converters Repository consists of several JSON files:
+
+There are next file in the Convertors Repository (format only json) for one Device 
 - config is mandatory 
 - uplink is mandatory
+- uplink(downlink)/metadata is optional
 - downlink is optional
 
 > All files and directories must have lowercase titles.
 > The "the name of device with version" as directory is a distinct value for every unique device listed in the devices directory.
 
-1. **config.json** with info about device (`devices/"the name of device with version"/config.json`)
-2. **decoder.json** for uplink of a single device (`devices/"the name of device with version"/uplink/decoder.json`)
-3. **payload.json** for uplink of a single device (`devices/"the name of device with version"/uplink/payload.json`)
-4. **result.json** for uplink of a single device (`devices/"the name of device with version"/uplink/result.json`)
-5. **decoder.json** for downlink of a single device (`devices/"the name of device with version"/downlink/decoder.json`)
-6. **payload.json** for downplink of a single device (`devices/"the name of device with version"/downlink/payload.json`)
-7. **result.json** for downlink of a single device (`devices/"the name of device with version"/downlink/result.json`)
+1. **config.json** Contains information about the device (`devices/"the name of device with version"/config.json`)
+2. **uplink/decoder.json** Decodes uplink messages from the device (`devices/"the name of device with version"/uplink/decoder.json`)
+3. **uplink/payload.json** Contains sample payload data for uplink messages (`devices/"the name of device with version"/uplink/payload.json`)
+4. **uplink/result.json** Contains the expected result after decoding uplink messages (`devices/"the name of device with version"/uplink/result.json`)
+5. **uplink/metadata.json** Contains sample metadata for uplink messages (`devices/"the name of device with version"/uplink/metadata.json`)
+6. **downlink/decoder.json** for downlink of a single device (`devices/"the name of device with version"/downlink/decoder.json`)
+7. **downlink/payload.json** for downplink of a single device (`devices/"the name of device with version"/downlink/payload.json`)
+8. **downlink/result.json** for downlink of a single device (`devices/"the name of device with version"/downlink/result.json`)
+9. **downlink/metadata.json** Contains sample metadata for downlink messages (`devices/"the name of device with version"/downlinkk/metadata.json`)
 
- ```bash
+
+ ```arduino
 Convertors Repository for devices
 ├── devices
 │   ├── <the name of device with version>
@@ -45,7 +51,7 @@ Convertors Repository for devices
 
 #### config.json
 
-There are next fields that must be set: scriptLang, name, version, manufacturer.
+Contains fields such as scriptLang, name, version, and manufacturer.
 
 > **NOTE** "scriptLang" can be set: *"javaScript"* or *"tbel"*
 > *Example*:
@@ -60,6 +66,8 @@ There are next fields that must be set: scriptLang, name, version, manufacturer.
 ```
 
 #### payload.json
+Contains sample payload data for testing the decoder.
+
 After **Test** the converter in "ThingsBoard Pe" and successfully **Save**, copy-paste value from **Paylod** and saving its to file **payload.json**.
 
 > *Example*:
@@ -73,6 +81,8 @@ After **Test** the converter in "ThingsBoard Pe" and successfully **Save**, copy
 ```
 
 #### metadata.json
+Contains sample metadata for testing the decoder.
+
 > **NOTE** "metadata.json" is optional. Only if **metadata** is used in the **decoder**.
 
 After **Test** the converter in "ThingsBoard Pe" and successfully **Save**, copy-paste key and value from **Metadata** and saving its to file **metadata.json**.
@@ -86,6 +96,8 @@ After **Test** the converter in "ThingsBoard Pe" and successfully **Save**, copy
 ```
 
 #### decoder.json
+Decodes messages from the device and contains the decoding logic.
+
 After saved converter in "ThingsBoard Pe" execute operation **"Export converter"** and result (file) change the filename to "decoder" with the extension "json".
 
 > *Example*:
@@ -112,7 +124,9 @@ After saved converter in "ThingsBoard Pe" execute operation **"Export converter"
 }
 ```
 
-#### result.json
+#### result.json\
+Contains the expected result after decoding the messages.
+
 After **Test** the converter in "ThingsBoard Pe" and successfully **Save**, copy-paste value from **Output** and saving its to file **result.json**.
 
 > *Example*:
