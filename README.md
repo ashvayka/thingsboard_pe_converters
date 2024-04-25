@@ -33,20 +33,21 @@ There are next file in the Convertors Repository (format only json) for one Devi
 
 
  ```arduino
-Convertors Repository for devices
-├── devices
-│   ├── <the name of device with version>
-│   │   ├── config.json                # config device
-│   │   ├── uplink                     # directory uplink for device
-│   │   │   ├── decoder.json           # decoder uplink for device
-│   │   │   ├── payload.json           # payload uplink (input data to decoder) for device
-│   │   │   ├── metadata.json (otional)# metadata uplink (input data to decoder) for device
-│   │   │   ├── result.json            # result after running decoder uplink for device
-│   │   ├── downlink (otional)         # directory downlink for device
-│   │   │   ├── decoder.json           # decoder downlink for device
-│   │   │   ├── payload.json           # payload downlink (input data to decoder) for device
-│   │   │   ├── metadata.json (otional)# metadata downlink (input data to decoder) for device
-│   │   │   ├── result.json            # result after running decoder downlink for device
+Converters Repository for devices
+└── devices
+    └── <device_name_with_version>
+        ├── config.json
+        ├── uplink
+        │   ├── decoder.json
+        │   ├── payload.json
+        │   ├── metadata.json  (optional)
+        │   └── result.json
+        └── downlink (optional)
+            ├── decoder.json
+            ├── payload.json
+            ├── metadata.json  (optional)
+            └── result.json
+
 ```
 
 #### config.json
