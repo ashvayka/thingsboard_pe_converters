@@ -35,7 +35,7 @@ There are next file in the Convertors Repository (format only json) for one Devi
  ```arduino
 Converters Repository for devices
 └── devices
-    └── <device_name_with_version>
+    └── <device_name_version_scriptLang>
         ├── config.json
         ├── uplink
         │   ├── decoder.json
